@@ -207,7 +207,7 @@ Layout уровня. Содержит:
 
 ---
 
-## 6. Build Planner Nodes (PR_)
+## 6. Build Planner Nodes PR
 ### Ноды планировщика
 
 **178 нод** в `PGG/Planners Related/Planner Coded Nodes/`
@@ -468,7 +468,7 @@ Layout уровня. Содержит:
 
 ---
 
-## 7. Mod Graph Nodes (MR_)
+## 7. Mod Graph Nodes MR
 ### Ноды модификации
 
 **40 нод** в `PGG/Mod Graph/`  
@@ -540,7 +540,7 @@ Layout уровня. Содержит:
 
 ---
 
-## 8. Field Setup Spawn Rules (SR_)
+## 8. Field Setup Spawn Rules SR
 ### Правила спавна
 
 **~85 правил** в `PGG/Rules Logics/`  
@@ -707,7 +707,7 @@ Layout уровня. Содержит:
 
 ---
 
-## 9. Function Nodes (FN_)
+## 9. Function Nodes FN
 ### Функциональные ноды
 
 Используются внутри `PlannerFunctionNode` — подграфы без компиляции.
@@ -729,7 +729,7 @@ Layout уровня. Содержит:
 
 ---
 
-## 10. Execution Nodes (PE_)
+## 10. Execution Nodes PE
 ### Ноды выполнения
 
 | Нода | Описание |
@@ -740,7 +740,7 @@ Layout уровня. Содержит:
 
 ---
 
-## 11. Blueprint Nodes (BPNode_)
+## 11. Blueprint Nodes BPNode
 ### Blueprint-ноды
 
 Кастомные ноды для специальных задач:
