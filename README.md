@@ -214,257 +214,257 @@ Layout уровня. Содержит:
 
 ### 6.1 Math (35 нод)
 
-| Нода | Описание |
-|------|----------|
-| **PR_Add** | Сложение значений. С полями — объединение в список |
-| **PR_Subtract** | Вычитание. С полями — убирает поля из списка |
-| **PR_Multiply** | Умножение. С полями — создаёт список полей |
-| **PR_Divide** | Деление |
-| **PR_Half** | Делит значение на 2 |
-| **PR_ABS** | Модуль (абсолютное значение) |
-| **PR_Invert** | Инверсия значения (-1 * v) |
-| **PR_OneMinus** | 1 − значение |
-| **PR_Clamp** | Ограничение значения диапазоном |
-| **PR_Round** | Округление |
-| **PR_RoundPosition** | Округление позиции до сетки |
-| **PR_Lerp** | Линейная интерполяция |
-| **PR_Normalize** | Нормализация вектора |
-| **PR_Magnitude** | Длина вектора / расстояние |
-| **PR_DotProduct** | Скалярное произведение / угол между векторами |
-| **PR_Cross** | Векторное произведение (X↔Z) |
-| **PR_Append** | Собрать X, Y, Z в Vector3 |
-| **PR_Split** | Разобрать значение на компоненты |
-| **PR_V3Get** | Получить X/Y/Z компоненту Vector3 |
-| **PR_GetValueByAxis** | Получить компоненту по оси |
-| **PR_DominantAxis** | Доминантная ось вектора |
-| **PR_AngleDirection** | Угол направления |
-| **PR_RotateDirection** | Поворот направления |
-| **PR_DirectionToRotation** | Направление → эйлеры (Look Direction) |
-| **PR_RotationToDirection** | Эйлеры → направление |
-| **PR_WrapAngle** | Нормализация угла (0–360 или ±180) |
-| **PR_GetRandom** | Случайное число в диапазоне |
-| **PR_GenerateRandom** | Случайное число с входными параметрами |
-| **PR_ChooseRandom** | Случайный выбор из нескольких входов |
-| **PR_MathMinMax** | Выбрать большее / меньшее (Min/Max) |
-| **PR_PeriodModulo** | Периодический modulo (%) |
-| **PR_BoolTrigger** | Триггер boolean значения |
-| **PR_ToBool** | Конвертация значения в bool |
-| **PR_Value** | Вывод значения произвольного типа |
-| **PR_Null** | Вывод null |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Add** | PR_Add | Сложение значений. С полями — объединение в список |
+| **Subtract** | PR_Subtract | Вычитание. С полями — убирает поля из списка |
+| **Multiply** | PR_Multiply | Умножение. С полями — создаёт список полей |
+| **Divide** | PR_Divide | Деление |
+| **Half Value** | PR_Half | Делит значение на 2 |
+| **Always Positive (Abs)** | PR_ABS | Модуль (абсолютное значение) |
+| **Invert Value** | PR_Invert | Инверсия значения (-1 * v) |
+| **One Minus** | PR_OneMinus | 1 − значение |
+| **Clamp** | PR_Clamp | Ограничение значения диапазоном |
+| **Round Value** | PR_Round | Округление |
+| **Round Position** | PR_RoundPosition | Округление позиции до сетки |
+| **Lerp** | PR_Lerp | Линейная интерполяция |
+| **Normalize** | PR_Normalize | Нормализация вектора |
+| **Magnitude** | PR_Magnitude | Длина вектора / расстояние |
+| **Dot / Angle Product** | PR_DotProduct | Скалярное произведение / угол между векторами |
+| **Cross** | PR_Cross | Векторное произведение (X↔Z) |
+| **Append** | PR_Append | Собрать X, Y, Z в Vector3 |
+| **Split** | PR_Split | Разобрать значение на компоненты |
+| **Get X/Y/Z** | PR_V3Get | Получить X/Y/Z компоненту Vector3 |
+| **Get Value by Axis** | PR_GetValueByAxis | Получить компоненту по оси |
+| **Dominant Axis** | PR_DominantAxis | Доминантная ось вектора |
+| **Angle Direction** | PR_AngleDirection | Угол направления |
+| **Rotate Direction** | PR_RotateDirection | Поворот направления |
+| **Dir to Rot** | PR_DirectionToRotation | Направление → эйлеры (Look Direction) |
+| **Rot to Dir** | PR_RotationToDirection | Эйлеры → направление |
+| **Wrap Angle** | PR_WrapAngle | Нормализация угла (0–360 или ±180) |
+| **Get Random** | PR_GetRandom | Случайное число в диапазоне |
+| **Get Random** (with inputs) | PR_GenerateRandom | Случайное число с входными параметрами |
+| **Choose Random** | PR_ChooseRandom | Случайный выбор из нескольких входов |
+| **Choose Greater / Smaller** | PR_MathMinMax | Min/Max |
+| **Period % Mod** | PR_PeriodModulo | Периодический modulo (%) |
+| **Trigger** | PR_BoolTrigger | Триггер boolean значения |
+| **To Bool** | PR_ToBool | Конвертация значения в bool |
+| **Value** | PR_Value | Вывод значения произвольного типа |
+| **Null Value** | PR_Null | Вывод null |
 
 ### 6.2 Cells — Работа с ячейками (30 нод)
 
-| Нода | Тип | Описание |
-|------|-----|----------|
-| **PR_IterateCells** | CellsManipulation | Цикл по всем ячейкам поля |
-| **PR_IterateCellsInLine** | CellsManipulation | Итерация ячеек по линии |
-| **PR_IterateCellOutsideDirections** | CellsManipulation | Итерация по внешним направлениям ячейки |
-| **PR_GetCellPosition** | ReadData | Получить мировую позицию ячейки |
-| **PR_GetCell** | ReadData | Получить ячейку по мировой позиции |
-| **PR_GetCellByIndex** | ReadData | Получить ячейку по индексу |
-| **PR_GetNearestCell** | ReadData | Ближайшая ячейка к позиции |
-| **PR_GetNearestCellIn** | ReadData | Ближайшая ячейка в наборе |
-| **PR_GetRadomCellIn** | ReadData | Случайная ячейка из набора |
-| **PR_GetRadomCellWithNoInstruction** | ReadData | Случайная ячейка без инструкций |
-| **PR_GetMostMiddleCell** | CellsManipulation | Самая центральная ячейка |
-| **PR_GetMostCellsDirection** | ReadData | Направление с наибольшим числом ячеек |
-| **PR_SelectCellsOnEdge** | CellsManipulation | Выбрать ячейки на краю поля |
-| **PR_GetCollidingCells** | ReadData | Ячейки, пересекающиеся с другим полем |
-| **PR_IsAnyCellInPosition** | ReadData | Есть ли ячейка в позиции? |
-| **PR_DetectCellIn** | ReadData | Детектировать ячейку в позиции |
-| **PR_AreCellsDiagonalToEach** | ReadData | Проверка диагональности ячеек |
-| **PR_CheckContactInDirection** | CellsManipulation | Контакт с полем в направлении |
-| **PR_BoundsSweepCollisionInDirection** | ReadData | Sweep-коллизия bounds в направлении |
-| **PR_RoundAccordingly** | CellsManipulation | Выровнять позицию под сетку другого поля |
-| **PR_SetCellParameter** | ReadData | Установить/добавить параметр ячейки |
-| **PR_GetCellParameters** | ReadData | Прочитать параметры ячейки |
-| **PR_GetCellInstructionParams** | ReadData | Параметры инструкции ячейки |
-| **PR_AddCellInstruction** | ReadData | Добавить инструкцию ячейке |
-| **PR_CopyOtherCellParams** | ReadData | Копировать инструкции/данные из другой ячейки |
-| **PR_CellContainsDataString** | ReadData | Проверить наличие строки в данных ячейки |
-| **PR_IsCellDataInRange** | ReadData | Проверка диапазона данных ячейки |
-| **PR_DirectionFromTo** | ReadData | Направление от/к позиции или ячейке |
-| **PR_CellDebug** | ReadData | Отладочная информация ячейки |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Iterate Cells** | PR_IterateCells | Цикл по всем ячейкам поля |
+| **Iterate Cells In Line** | PR_IterateCellsInLine | Итерация ячеек по линии |
+| **Iterate Cell Outside Dir** | PR_IterateCellOutsideDirections | Итерация по внешним направлениям ячейки |
+| **Get Cell Position** | PR_GetCellPosition | Получить мировую позицию ячейки |
+| **Get Cell** | PR_GetCell | Получить ячейку по мировой позиции |
+| **Get Cell By Index** | PR_GetCellByIndex | Получить ячейку по индексу |
+| **Get Nearest Cell** | PR_GetNearestCell | Ближайшая ячейка к позиции |
+| **Get Nearest Cell In** | PR_GetNearestCellIn | Ближайшая ячейка в наборе |
+| **Get Random Cell In** | PR_GetRadomCellIn | Случайная ячейка из набора |
+| **Get Random Cell With No Instruction** | PR_GetRadomCellWithNoInstruction | Случайная ячейка без инструкций |
+| **Get Most Middle Cell** | PR_GetMostMiddleCell | Самая центральная ячейка |
+| **Most Cells In Dir** | PR_GetMostCellsDirection | Направление с наибольшим числом ячеек |
+| **Select Cells On Edge** | PR_SelectCellsOnEdge | Выбрать ячейки на краю поля |
+| **Get Colliding / Not Colliding Cells** | PR_GetCollidingCells | Ячейки, пересекающиеся с другим полем |
+| **Is Any Cell In Position** | PR_IsAnyCellInPosition | Есть ли ячейка в позиции? |
+| **Detect Cell in** | PR_DetectCellIn | Детектировать ячейку в позиции |
+| **Is cell diagonal to** | PR_AreCellsDiagonalToEach | Проверка диагональности ячеек |
+| **Contact In Direction** | PR_CheckContactInDirection | Контакт с полем в направлении |
+| **Bounds Sweep Collision** | PR_BoundsSweepCollisionInDirection | Sweep-коллизия bounds в направлении |
+| **Get Cell Aligned Position** | PR_RoundAccordingly | Выровнять позицию под сетку другого поля |
+| **Set/Add Cell Parameter** | PR_SetCellParameter | Установить/добавить параметр ячейки |
+| **Cell Parameters** | PR_GetCellParameters | Прочитать параметры ячейки |
+| **Instruction Parameters** | PR_GetCellInstructionParams | Параметры инструкции ячейки |
+| **Add Cell Instruction** | PR_AddCellInstruction | Добавить инструкцию ячейке |
+| **Copy Cell Datas** | PR_CopyOtherCellParams | Копировать инструкции/данные из другой ячейки |
+| **Cell Contains Data String** | PR_CellContainsDataString | Проверить наличие строки в данных ячейки |
+| **Check cell data in range** | PR_IsCellDataInRange | Проверка диапазона данных ячейки |
+| **Get Direction from to** | PR_DirectionFromTo | Направление от/к позиции или ячейке |
+| **Cell Debug** | PR_CellDebug | Отладочная информация ячейки |
 
 ### 6.3 Field Planner — Операции с полем (67 нод)
 
 #### Доступ к данным поля (ReadData)
 
-| Нода | Описание |
-|------|----------|
-| **PR_GetFieldGridBoundaries** | Границы сетки поля |
-| **PR_CellsCount** | Количество ячеек |
-| **PR_GetFieldBounds** | Bounds поля (поддерживает несколько полей → один Bounds) |
-| **PR_GetBoundsParameter** | Параметр bounds (размер, центр и т.д.) |
-| **PR_GetFieldParameter** | Параметры планировщика |
-| **PR_GetCellInstructionCount** | Количество инструкций ячейки |
-| **PR_GetCellInstruction** | Получить конкретную инструкцию ячейки |
-| **PR_GetFieldSelector** | Получить FieldPlanner из селектора |
-| **PR_FieldsCount** | Общее число полей |
-| **PR_FieldInstancesCount** | Число экземпляров планировщика |
-| **PR_SubFieldsCount** | Число подполей |
-| **PR_GetSubField** | Получить подполе по индексу |
-| **PR_GetSubFields** | Получить все подполя |
-| **PR_GetFieldInstance** | Экземпляр планировщика по ID |
-| **PR_GetFieldFromInt** | Планировщик по числовому индексу |
-| **PR_GetGlobalIndexOfInstance** | Глобальный индекс экземпляра |
-| **PR_GetPlannerDuplicate** | Дубликат планировщика |
-| **PR_GetFieldDuplicates** | Все дубликаты |
-| **PR_GetCellSize** | Размер ячейки сетки |
-| **PR_ScaleWithFieldCellSize** | Масштабирование с учётом размера ячейки |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Grid Boundary (Cells)** | PR_GetFieldGridBoundaries | Границы сетки поля |
+| **Get Cells Count** | PR_CellsCount | Количество ячеек |
+| **Get Bounds** | PR_GetFieldBounds | Bounds поля (несколько полей → один Bounds) |
+| **Bounds Parameter** | PR_GetBoundsParameter | Параметр bounds (размер, центр и т.д.) |
+| **Get Parameter** | PR_GetFieldParameter | Параметры планировщика |
+| **Cell Instructions Count** | PR_GetCellInstructionCount | Количество инструкций ячейки |
+| **Get Cell Instruction** | PR_GetCellInstruction | Получить конкретную инструкцию ячейки |
+| **Get Field** | PR_GetFieldSelector | Получить FieldPlanner из селектора |
+| **Get Fields Count** | PR_FieldsCount | Общее число полей |
+| **Instances Count** | PR_FieldInstancesCount | Число экземпляров планировщика |
+| **Get Sub-Fields Count** | PR_SubFieldsCount | Число подполей |
+| **Get Sub Field** | PR_GetSubField | Получить подполе по индексу |
+| **Get Sub Fields of** | PR_GetSubFields | Получить все подполя |
+| **Get Field Instance** | PR_GetFieldInstance | Экземпляр планировщика по ID |
+| **Get Field** | PR_GetFieldFromInt | Планировщик по числовому индексу |
+| **Get Index Of Instance** | PR_GetGlobalIndexOfInstance | Глобальный индекс экземпляра |
+| **Instance of Planner** | PR_GetPlannerDuplicate | Дубликат планировщика |
+| **Get Field Instances** | PR_GetFieldDuplicates | Все дубликаты |
+| **Get Cell Size** | PR_GetCellSize | Размер ячейки сетки |
+| **Cell Size Multiply** | PR_ScaleWithFieldCellSize | Масштабирование с учётом размера ячейки |
 
 #### Поиск соседей и других полей
 
-| Нода | Описание |
-|------|----------|
-| **PR_GetNeightbourField** | Ближайшее смежное поле |
-| **PR_ChooseNeightbourFields** | Выбрать несколько смежных полей |
-| **PR_GetNearestFieldPlanner** | Ближайший планировщик (с условием) |
-| **PR_GetFarthestFieldPlanner** | Самый дальний планировщик |
-| **PR_GetRadomFieldPlanner** | Случайный планировщик |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Get Neightbour Field** | PR_GetNeightbourField | Ближайшее смежное поле |
+| **Choose Neightbour Fields** | PR_ChooseNeightbourFields | Выбрать несколько смежных полей |
+| **Nearest Field Planner** | PR_GetNearestFieldPlanner | Ближайший планировщик (с условием) |
+| **Farthest Field Planner** | PR_GetFarthestFieldPlanner | Самый дальний планировщик |
+| **Get Random Field Instance** | PR_GetRadomFieldPlanner | Случайный планировщик |
 
 #### Проверки полей
 
-| Нода | Описание |
-|------|----------|
-| **PR_IsFieldCollidingWith** | Пересекается ли поле с другим |
-| **PR_IsFullyContainedBy** | Полностью ли поле содержится внутри другого |
-| **PR_IsFieldAligningWith** | Выровнено ли поле с другим |
-| **PR_CountAlignmentsWith** | Число выравниваний с другим полем |
-| **PR_CheckBoundsCollisionBetween** | Коллизия bounds между полями |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Is Colliding With** | PR_IsFieldCollidingWith | Пересекается ли поле с другим |
+| **Is Fully Contained By** | PR_IsFullyContainedBy | Полностью ли содержится внутри другого |
+| **Is Aligning With** | PR_IsFieldAligningWith | Выровнено ли поле с другим |
+| **Count Alignment Cells** | PR_CountAlignmentsWith | Число выравниваний с другим полем |
+| **Bounds Collision** | PR_CheckBoundsCollisionBetween | Коллизия bounds между полями |
 
 #### Модификация формы
 
-| Нода | Описание |
-|------|----------|
-| **PR_JoinShapeCells** | Объединить ячейки формы |
-| **PR_RemoveFieldCells** | Удалить ячейки из поля |
-| **PR_RemoveAllFieldCells** | Удалить все ячейки |
-| **PR_ReplaceFieldCells** | Заменить ячейки |
-| **PR_ShapeSubtract** | Вычесть одну форму из другой |
-| **PR_ShapeUnion** | Объединение форм |
-| **PR_SplitField** | Разделить поле |
-| **PR_YToFields** | Y-координаты в отдельные поля |
-| **PR_GetDisconnectedChunks** | Найти изолированные группы ячеек |
-| **PR_RectangleDivide** | Разделить прямоугольную область |
-| **PR_GenerateEmptyShape** | Пустой контейнер формы |
-| **PR_AddSubField** | Добавить подполе |
-| **PR_AssignSubFieldParameter** | Назначить параметр подполю |
-| **PR_RemoveTooFarCells** | Удалить слишком далёкие ячейки |
-| **PR_DiscardField** | Отбросить поле целиком |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Join Field-Shape Cells** | PR_JoinShapeCells | Объединить ячейки формы |
+| **Remove Field Cells** | PR_RemoveFieldCells | Удалить ячейки из поля |
+| **Remove All Field Cells** | PR_RemoveAllFieldCells | Удалить все ячейки |
+| **Replace Field Cells** | PR_ReplaceFieldCells | Заменить ячейки |
+| **Subtract Shape Cells** | PR_ShapeSubtract | Вычесть одну форму из другой |
+| **Union Shape Cells** | PR_ShapeUnion | Объединение форм |
+| **Split Field** | PR_SplitField | Разделить поле |
+| **Each Y Level To Shape** | PR_YToFields | Y-координаты в отдельные поля |
+| **Get Disconnected chunks** | PR_GetDisconnectedChunks | Найти изолированные группы ячеек |
+| **Rectangle Divide** | PR_RectangleDivide | Разделить прямоугольную область |
+| **Generate Empty Shape** | PR_GenerateEmptyShape | Пустой контейнер формы |
+| **Add Sub Field** | PR_AddSubField | Добавить подполе |
+| **Assign Sub Field Param** | PR_AssignSubFieldParameter | Назначить параметр подполю |
+| **Remove Too Far Cells** | PR_RemoveTooFarCells | Удалить слишком далёкие ячейки |
+| **Discard Field** | PR_DiscardField | Отбросить поле целиком |
 
 #### Трансформация поля (WholeFieldPlacement)
 
-| Нода | Описание |
-|------|----------|
-| **PR_GetFieldPosition** | Получить позицию поля |
-| **PR_SetFieldPosition** | Установить позицию |
-| **PR_RoundFieldPosition** | Округлить позицию поля |
-| **PR_GetFieldRotation** | Получить ротацию поля |
-| **PR_SetFieldRotation** | Установить ротацию |
-| **PR_SetFieldOrigin** | Установить origin поля |
-| **PR_CenterFieldOrigin** | Центрировать origin |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Get Field Position** | PR_GetFieldPosition | Получить позицию поля |
+| **Set Field Position** | PR_SetFieldPosition | Установить позицию |
+| **Round Field Position** | PR_RoundFieldPosition | Округлить позицию поля |
+| **Get Field Rotation** | PR_GetFieldRotation | Получить ротацию поля |
+| **Set Field Rotation** | PR_SetFieldRotation | Установить ротацию |
+| **Set Field Origin** | PR_SetFieldOrigin | Установить origin поля |
+| **Center Field Origin** | PR_CenterFieldOrigin | Центрировать origin |
 
 #### Размещение и коллизии
 
-| Нода | Описание |
-|------|----------|
-| **PR_TightPlacement** | Плотное размещение (прижать к другому полю) |
-| **PR_CustomTightPlacement** | Кастомное плотное размещение |
-| **PR_PushOutOfCollision** | Вытолкнуть из коллизии |
-| **PR_PushOutAway** | Вытолкнуть подальше |
-| **PR_PushInDirUntilNotCollides** | Толкать в направлении пока не перестанет пересекаться |
-| **PR_PushInDirUntilFullyContained** | Толкать пока полностью не войдёт |
-| **PR_PushInDirToAlign** | Толкать для выравнивания |
-| **PR_BoundsSeparatePushOut** | Разделить пересекающиеся bounds |
-| **PR_AlignTo** | Выровнять к другому полю |
-| **PR_QuickAlign** | Быстрое выравнивание (альтернативный алгоритм) |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Tight Placement** | PR_TightPlacement | Плотное размещение (прижать к другому полю) |
+| **Customized Tight Placement** | PR_CustomTightPlacement | Кастомное плотное размещение |
+| **Push Out Collision** | PR_PushOutOfCollision | Вытолкнуть из коллизии |
+| **Push Out Away** | PR_PushOutAway | Вытолкнуть подальше |
+| **Push Until not Collides** | PR_PushInDirUntilNotCollides | Толкать пока не перестанет пересекаться |
+| **Push Until Contained By** | PR_PushInDirUntilFullyContained | Толкать пока полностью не войдёт |
+| **Push For Align** | PR_PushInDirToAlign | Толкать для выравнивания |
+| **Bounds Separate Push** | PR_BoundsSeparatePushOut | Разделить пересекающиеся bounds |
+| **Align Self To** | PR_AlignTo | Выровнять к другому полю |
+| **Quick Align** | PR_QuickAlign | Быстрое выравнивание |
 
 #### Переменные
 
-| Нода | Описание |
-|------|----------|
-| **PR_GetLocalVariable** | Прочитать локальную переменную |
-| **PR_SetLocalVariable** | Установить локальную переменную |
-| **PR_SetLocalVariableAlloc** | Установить переменную с сохранением между итерациями |
-| **PR_GetInternalValueVariable** | Прочитать внутреннюю переменную экземпляра |
-| **PR_SetInternalValueVariable** | Записать внутреннюю переменную |
-| **PR_GetFieldPlannerVariable** | Прочитать переменную планировщика |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Get Local Variable** | PR_GetLocalVariable | Прочитать локальную переменную |
+| **Set Local Variable** | PR_SetLocalVariable | Установить локальную переменную |
+| **Set Local Variable Allocated** | PR_SetLocalVariableAlloc | С сохранением между итерациями |
+| **Get Internal Value** | PR_GetInternalValueVariable | Внутренняя переменная экземпляра |
+| **Set Internal Value** | PR_SetInternalValueVariable | Записать внутреннюю переменную |
+| **Get Field Variable** | PR_GetFieldPlannerVariable | Переменная планировщика |
 
 ### 6.4 Logic — Логика и ветвление (13 нод)
 
-| Нода | Описание |
-|------|----------|
-| **PR_EqualIfSwitch** | If compare ⇒ Output Value (сравнение → значение) |
-| **PR_EqualIfExecution** | If compare ⇒ Execute A/B (сравнение → ветка выполнения) |
-| **PR_EqualIfSwitchExecution** | If ⇒ Execute A/B |
-| **PR_BoolIfSwitch** | If true/false ⇒ Output A or B |
-| **PR_TrueFalseSwitch** | If compare ⇒ true/false |
-| **PR_BoolAccumulate** | Накопление условий → bool |
-| **PR_ValueBetweenSwitch** | Если значение в диапазоне |
-| **PR_5050Execution** | 50% вероятность → Execute A или B |
-| **PR_IsNull** | Проверка на null |
-| **PR_IteratorLoop** | Цикл-итератор |
-| **PR_RotorLoop** | Перебор поворотов (0°, 90°, 180°, 270°) |
-| **PR_IterateList** | Цикл по списку object |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **If == Switch** | PR_EqualIfSwitch | Сравнение → Output Value |
+| **If A==B : False/True** | PR_EqualIfExecution | Сравнение → Execute A/B |
+| **If => Execute A or B** | PR_EqualIfSwitchExecution | Bool → Execute A/B |
+| **Output A or B** | PR_BoolIfSwitch | If true/false → Output A or B |
+| **If A==B : False/True** | PR_TrueFalseSwitch | Сравнение → return True/False |
+| **If => Return Bool** | PR_BoolAccumulate | Накопление условий → bool |
+| **If Between : False/True** | PR_ValueBetweenSwitch | Значение в диапазоне |
+| **If => 50% Execute A or B** | PR_5050Execution | 50% вероятность → ветка |
+| **Is Null?** | PR_IsNull | Проверка на null |
+| **Iterator (Loop)** | PR_IteratorLoop | Цикл-итератор |
+| **Iterate Rotations** | PR_RotorLoop | Перебор поворотов (0°, 90°, 180°, 270°) |
+| **Iterate List** | PR_IterateList | Цикл по списку object |
 
 ### 6.5 Build Setup (11 нод)
 
-| Нода | Описание |
-|------|----------|
-| **PR_CollectFields** | Собрать все поля в список |
-| **PR_ChooseFields** | Выбрать поля по условию |
-| **PR_ChooseOneField** | Найти одно поле по условию (наибольшее, ближайшее и т.д.) |
-| **PR_IterateFields** | Цикл по полям |
-| **PR_GetIterationIndex** | Текущий индекс итерации |
-| **PR_GetBuildAreaBounds** | Bounds области генерации |
-| **PR_GetBuildVariable** | Переменная Build Planner |
-| **PR_ExpandBoundsSize** | Расширить bounds |
-| **PR_GenerateBounds** | Сгенерировать bounds |
-| **PR_ScheduleFieldInjection** | Запланировать инъекцию переменной в FieldSetup |
-| **PR_CallGraph** | Вызвать другой подграф |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Collect All Fields** | PR_CollectFields | Собрать все поля в список |
+| **Choose Fields** | PR_ChooseFields | Выбрать поля по условию |
+| **Choose One Field** | PR_ChooseOneField | Найти одно поле по условию |
+| **Iterate Fields** | PR_IterateFields | Цикл по полям |
+| **Iteration Index** | PR_GetIterationIndex | Текущий индекс итерации |
+| **Build area Bounds** | PR_GetBuildAreaBounds | Bounds области генерации |
+| **Get Build Variable** | PR_GetBuildVariable | Переменная Build Planner |
+| **Expand Bounds Size** | PR_ExpandBoundsSize | Расширить bounds |
+| **Generate Bounds** | PR_GenerateBounds | Сгенерировать bounds |
+| **Schedule Field Injection** | PR_ScheduleFieldInjection | Инъекция переменной в FieldSetup |
+| **Call Graph (experimental)** | PR_CallGraph | Вызвать другой подграф |
 
 ### 6.6 Generating — Генерация форм (10 нод)
 
-| Нода | Описание |
-|------|----------|
-| **PR_RectGenerate** | Сгенерировать прямоугольник заданных размеров |
-| **PR_LineGenerate** | Сгенерировать линию/коридор |
-| **PR_PathFindGenerate** | Поиск пути A* между точками |
-| **PR_FindPathTowards** | Pathfind к целевой позиции |
-| **PR_BoundsToCells** | Конвертировать bounds в ячейки |
-| **PR_AddCellToField** | Добавить ячейку к полю |
-| **PR_GetInlineShape** | Получить внутренний контур формы |
-| **PR_GetOutlineShape** | Получить внешний контур формы |
-| **PR_GetFattenShape** | Утолстить тонкие пути |
-| **PR_GetScaleConvertedShape** | Конвертировать форму с другим масштабом |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Rect Generate** | PR_RectGenerate | Прямоугольник заданных размеров |
+| **Line Generate** | PR_LineGenerate | Линия/коридор |
+| **Path Find (deprecated)** | PR_PathFindGenerate | Поиск пути A* (устаревший) |
+| **Path Find Generate** | PR_FindPathTowards | Pathfind к целевой позиции |
+| **Bounds To Cells** | PR_BoundsToCells | Конвертировать bounds в ячейки |
+| **Add Cell to Field** | PR_AddCellToField | Добавить ячейку к полю |
+| **Get Inline Shape** | PR_GetInlineShape | Внутренний контур формы |
+| **Get Outline Shape** | PR_GetOutlineShape | Внешний контур формы |
+| **Get Fattened Shape** | PR_GetFattenShape | Утолстить тонкие пути |
+| **Convert To New Scale** | PR_GetScaleConvertedShape | Конвертировать форму с другим масштабом |
 
 ### 6.7 Utilities & Debug (8 нод)
 
-| Нода | Описание |
-|------|----------|
-| **PR_Comment** | Комментарий на графе |
-| **PR_Group** | Группировка нод |
-| **PR_ConsoleLog** | Debug.Log |
-| **PR_DebugDrawFieldHighlight** | Визуализация поля в Scene View |
-| **PR_DebugDrawPosition** | Визуализация позиции |
-| **PR_ToString** | Конвертация в строку |
-| **PR_OneCallFilter** | Фильтр однократного вызова |
-| **PR_Rewire** | Переподключение execution-потока |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| *(текст заголовка)* | PR_Comment | Комментарий на графе |
+| *(текст группы)* | PR_Group | Группировка нод |
+| **Console Log** | PR_ConsoleLog | Debug.Log |
+| **Debug Field Highlight** | PR_DebugDrawFieldHighlight | Визуализация поля в Scene View |
+| **Debug Draw Position** | PR_DebugDrawPosition | Визуализация позиции |
+| **To String** | PR_ToString | Конвертация в строку |
+| **Redirect Value** | PR_OneCallFilter | Фильтр однократного вызова |
+| **Rewire** | PR_Rewire | Переподключение execution-потока |
 
 ### 6.8 Specific Solutions (2 ноды)
 
-| Нода | Описание |
-|------|----------|
-| **PR_PathFind_DeloneConnections** | Связи комнат по Delaunay (Bowyer–Watson) |
-| **PR_ApplyPerlinNoiseOffset** | Смещение высоты по Perlin Noise |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Generate Fields Connections** | PR_PathFind_DeloneConnections | Связи комнат по Delaunay (Bowyer–Watson) |
+| **Perlin Noise Offset** | PR_ApplyPerlinNoiseOffset | Смещение высоты по Perlin Noise |
 
 ### 6.9 Community (2 ноды)
 
-| Нода | Описание |
-|------|----------|
-| **PR_RemoveCellsUnder** | Удалить ячейки «под» другими |
-| **PR_PathFindGenerateLowerCost** | Pathfind с пониженной стоимостью на указанных чекерах |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Remove Cells Under** | PR_RemoveCellsUnder | Удалить ячейки «под» другими |
+| **Path Find - Lower Cost On (custom)** | PR_PathFindGenerateLowerCost | Pathfind с пониженной стоимостью |
 
 ---
 
@@ -476,67 +476,67 @@ Layout уровня. Содержит:
 
 ### 7.1 Управление спавном
 
-| Нода | Описание |
-|------|----------|
-| **MR_AllowSpawn** | Разрешить спавн (восстановить после Break) |
-| **MR_BreakSpawner** | Запретить спавн |
-| **MR_DisableSpawningMainPrefab** | Отключить спавн основного префаба |
-| **MR_GenerateSpawn** | Создать новые данные спавна |
-| **MR_ApplyPrefabToSpawn** | Назначить префаб для спавна |
-| **MR_AddExtraSpawn** | Добавить дополнительный спавн в очередь ячейки |
-| **MR_CopySpawn** | Копировать данные спавна |
-| **MR_RemoveSpawn** | Удалить спавн из очереди |
-| **MR_AddSpawnStigma** | Добавить строковую стигму спавну |
-| **MR_AddCellData** | Добавить Cell Data строку ячейке |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Restore Allow Spawn** | MR_AllowSpawn | Разрешить спавн (восстановить после Break) |
+| **Break Spawner** | MR_BreakSpawner | Запретить спавн |
+| **Disable Main Spawn** | MR_DisableSpawningMainPrefab | Отключить спавн основного префаба |
+| **Generate Spawn** | MR_GenerateSpawn | Создать новые данные спавна |
+| **Apply Prefab** | MR_ApplyPrefabToSpawn | Назначить префаб для спавна |
+| **Extra Spawn** | MR_AddExtraSpawn | Доп. спавн в очередь ячейки |
+| **Copy Spawn** | MR_CopySpawn | Копировать данные спавна |
+| **Remove Spawn** | MR_RemoveSpawn | Удалить спавн из очереди |
+| **Add Spawn Stigma** | MR_AddSpawnStigma | Строковая стигма спавну |
+| **Add Cell Data** | MR_AddCellData | Cell Data строка ячейке |
 
-### 7.2 Чтение позиции / ротации / масштаба
+### 7.2 Позиция / ротация / масштаб
 
-| Нода | Описание |
-|------|----------|
-| **MR_GetPosition** | Позиция спавна |
-| **MR_GetRotation** | Ротация спавна |
-| **MR_GetScale** | Масштаб спавна |
-| **MR_SetPosition** | Установить/сместить позицию |
-| **MR_SetRotation** | Установить/сместить ротацию |
-| **MR_SetScale** | Установить масштаб |
-| **MR_ClearOffsets** | Сбросить все оффсеты |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Get Spawn Position** | MR_GetPosition | Позиция спавна |
+| **Get Spawn Rotation** | MR_GetRotation | Ротация спавна |
+| **Get Spawn Scale** | MR_GetScale | Масштаб спавна |
+| **Set Spawn Position** | MR_SetPosition | Установить/сместить позицию |
+| **Set Spawn Rotation** | MR_SetRotation | Установить/сместить ротацию |
+| **Set Spawn Scale** | MR_SetScale | Установить масштаб |
+| **Clear Offsets** | MR_ClearOffsets | Сбросить все оффсеты |
 
 ### 7.3 Работа с ячейками
 
-| Нода | Описание |
-|------|----------|
-| **MR_GetCellAt** | Ячейка по смещению от текущей |
-| **MR_GetCellPosition** | Мировая позиция ячейки сетки |
-| **MR_GetCellStateOnGrid** | Состояние ячейки (в сетке / вне / занята тегом) |
-| **MR_GetCellsAround** | Ячейки в квадрате вокруг |
-| **MR_GetNeighbourCell** | Соседняя ячейка (с поворачиваемым смещением) |
-| **MR_GetFillConnectedCells** | Все достижимые ячейки (fill, без диагоналей) |
-| **MR_GetNearestCellWith** | Ближайшая ячейка с условием |
-| **MR_GetOtherCellInDistance** | Расстояние до ячеек по пути |
-| **MR_IterateCells** | Итерация по списку ячеек |
-| **MR_IterateCellInstructions** | Итерация по инструкциям ячейки |
-| **MR_LineCheckCells** | Проверка ячеек по линии в 4 направлениях |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Get Cell At** | MR_GetCellAt | Ячейка по смещению от текущей |
+| **Get Cell Position** | MR_GetCellPosition | Мировая позиция ячейки сетки |
+| **Cell State** | MR_GetCellStateOnGrid | Состояние ячейки (в сетке / вне / занята тегом) |
+| **Get Cells Around** | MR_GetCellsAround | Ячейки в квадрате вокруг |
+| **Get Cell Neighbour** | MR_GetNeighbourCell | Соседняя ячейка (с поворачиваемым смещением) |
+| **Get Connected Cells** | MR_GetFillConnectedCells | Все достижимые ячейки (fill, без диагоналей) |
+| **Nearest Cell With** | MR_GetNearestCellWith | Ближайшая ячейка с условием |
+| **Distance to other cells** | MR_GetOtherCellInDistance | Расстояние до ячеек по пути |
+| **Iterate Cells** | MR_IterateCells | Итерация по списку ячеек |
+| **Iterate Instructions** | MR_IterateCellInstructions | Итерация по инструкциям ячейки |
+| **Line Check Cells** | MR_LineCheckCells | Проверка ячеек по линии в 4 направлениях |
 
 ### 7.4 Данные спавна
 
-| Нода | Описание |
-|------|----------|
-| **MR_GetSpawnFromCell** | Первый/все спавны ячейки с параметрами |
-| **MR_GetSpawnsInCell** | Все спавны в ячейке |
-| **MR_GetSpawnPrefab** | Ссылка на спавнимый префаб |
-| **MR_GetPrefabBounds** | Bounds префаба |
-| **MR_SpawnIsTagged** | Проверка тега спавна |
-| **MR_IterateSpawns** | Итерация по спавнам ячейки |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Get Spawn From Cell** | MR_GetSpawnFromCell | Первый/все спавны ячейки |
+| **Get Spawns In Cell** | MR_GetSpawnsInCell | Все спавны в ячейке |
+| **Get Spawn Prefab** | MR_GetSpawnPrefab | Ссылка на спавнимый префаб |
+| **Get Prefab Bounds** | MR_GetPrefabBounds | Bounds префаба |
+| **Spawn is Tagged / Stigmed** | MR_SpawnIsTagged | Проверка тега/стигмы спавна |
+| **Iterate Spawns** | MR_IterateSpawns | Итерация по спавнам ячейки |
 
 ### 7.5 Другое
 
-| Нода | Описание |
-|------|----------|
-| **MR_GetFieldVariable** | Прочитать переменную FieldSetup / ModPack |
-| **MR_GetCommandDirection** | Направление команды ячейки |
-| **MR_GetGridCellSize** | Размер ячейки сетки |
-| **MR_GridSize** | Размеры сетки |
-| **MR_TileDesigner** | Сгенерировать объект через Tile Designer |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Get Field Variable** | MR_GetFieldVariable | Переменная FieldSetup / ModPack |
+| **Command Direction** | MR_GetCommandDirection | Направление команды ячейки |
+| **Get Grid Cell Size** | MR_GetGridCellSize | Размер ячейки сетки |
+| **Grid Size** | MR_GridSize | Размеры сетки |
+| **Tile Designer** | MR_TileDesigner | Сгенерировать объект через Tile Designer |
 
 ---
 
@@ -556,154 +556,154 @@ Layout уровня. Содержит:
 
 ### 8.1 Cells — Работа с ячейками
 
-| Правило | Описание |
-|---------|----------|
-| **SR_CellOperation** | Операции над выбранной ячейкой |
-| **SR_AnalyzeCell** | Проверка состояния ячейки (allow/deny) |
-| **SR_AddCellDataString** | Записать cell data при условиях |
-| **SR_CellSpawnsCount** | Условие по числу спавнов в ячейке |
-| **SR_HideCell** | Скрытие ячейки |
-| **SR_PreventModsSpawns** | Блокировка спавнов других модификаторов |
-| **SR_PreventSpawns** | Блокировка следующих спавнеров по тегам |
-| **SR_RemoveSpawn** | Удаление спавна |
-| **SR_RemoveSpawnsTool** | Удаление спавнов по наборам условий |
-| **SR_RemoveInPosition** | Удаление спавнов по расстоянию |
-| **SR_RemoveInDirection** | Удаление по направлению (Legacy) |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Cell Operation** | SR_CellOperation | Операции над выбранной ячейкой |
+| **Analyze Cell** | SR_AnalyzeCell | Проверка состояния ячейки (allow/deny) |
+| **Add Cell Data String** | SR_AddCellDataString | Записать cell data при условиях |
+| **Cell Spawns Count** | SR_CellSpawnsCount | Условие по числу спавнов в ячейке |
+| **Hide Cell** | SR_HideCell | Скрытие ячейки |
+| **Prevent Mods Spawns** | SR_PreventModsSpawns | Блокировка спавнов других модификаторов |
+| **Prevent Spawns** | SR_PreventSpawns | Блокировка следующих спавнеров по тегам |
+| **Remove Spawn** | SR_RemoveSpawn | Удаление спавна |
+| **Remove Spawns Tool** | SR_RemoveSpawnsTool | Удаление спавнов по наборам условий |
+| **Remove In Position** | SR_RemoveInPosition | Удаление спавнов по расстоянию |
+| **Remove In Direction** | SR_RemoveInDirection | Удаление по направлению (Legacy) |
 
 ### 8.2 Placement — Условия размещения
 
-| Правило | Описание |
-|---------|----------|
-| **SR_CellNeightbours** | Гибкая проверка соседних ячеек (3D-ротор) |
-| **SR_MultiCheckCellNeightbours** | Множественные условия по соседям |
-| **SR_CellPosition** | Условие по позиции ячейки на сетке |
-| **SR_IfWorldPosition** | Условие по мировой позиции |
-| **SR_IfRotated** | Допуск по диапазону поворота ячейки |
-| **SR_IfCellContainsTag** | Теги/стигма/data в ячейке |
-| **SR_OnGridCorner** | Углы сетки |
-| **SR_AllowEveryFew** | Каждые N ячеек |
-| **SR_CheckCellsInLine** | Проверка ячеек по линии |
-| **SR_FreeSpace** | Проверка свободного места (Alpha) |
-| **SR_HelperPivotCorrection** | Коррекция координат для выравнивания |
-| **SR_SimulatePhysics** | Физическая симуляция после спавна |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Check cell neightbours** | SR_CellNeightbours | Гибкая проверка соседних ячеек (3D-ротор) |
+| **Multi check cell neightbours** | SR_MultiCheckCellNeightbours | Множественные условия по соседям |
+| **Grid Position** | SR_CellPosition | Условие по позиции ячейки на сетке |
+| **If World Position** | SR_IfWorldPosition | Условие по мировой позиции |
+| **If Rotated** | SR_IfRotated | Допуск по диапазону поворота ячейки |
+| **If cell contains Tag** | SR_IfCellContainsTag | Теги/стигма/data в ячейке |
+| **On Grid Corner** | SR_OnGridCorner | Углы сетки |
+| **Allow Spawn Every Few** | SR_AllowEveryFew | Каждые N ячеек |
+| **Check cells in line** | SR_CheckCellsInLine | Проверка ячеек по линии |
+| **Check Free Space** | SR_FreeSpace | Проверка свободного места (Alpha) |
+| **Helper Pivot Correction** | SR_HelperPivotCorrection | Коррекция координат |
+| **Simulate Physics** | SR_SimulatePhysics | Физическая симуляция после спавна |
 
 ### 8.3 Transforming — Трансформация
 
-| Правило | Описание |
-|---------|----------|
-| **SR_MoveRotateScale** | Базовый оффсет позиции/ротации/масштаба |
-| **SR_GetPosRotScale** | Получить PRS от другого спавна |
-| **SR_PrefabOffset** | Оффсет из координат префаба |
-| **SR_ConditionalPushPosition** | Push с разными значениями по углу |
-| **SR_PerlinNoiseRotationOrScale** | Perlin Noise для ротации/масштаба |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Move-Rotate-Scale** | SR_MoveRotateScale | Базовый оффсет PRS |
+| **Get Position-Rotation-Scale** | SR_GetPosRotScale | Получить PRS от другого спавна |
+| **Prefab Offset** | SR_PrefabOffset | Оффсет из координат префаба |
+| **Conditional Push Position** | SR_ConditionalPushPosition | Push с разными значениями по углу |
+| **Perlin Noise Rotation-Scale** | SR_PerlinNoiseRotationOrScale | Perlin Noise для ротации/масштаба |
 
 #### Legacy Transforming
 
-| Правило | Описание |
-|---------|----------|
-| **SR_Scale** | Масштабирование |
-| **SR_WorldOffset** | Смещение позиции (без ротации) |
-| **SR_DirectOffset** | Прямое смещение |
-| **SR_PushPosition** | Аддитивный оффсет |
-| **SR_ScaleRange** | Случайный масштаб в диапазоне |
-| **SR_GetCoords** | Координаты от спавна по тегу |
-| **SR_GetRestrictedRotation** | Ротация из command ячейки |
-| **SR_GetCommandRotation** | Ротация из command |
-| **SR_ChangeRotationPivot** | Поворот вокруг другого pivot |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Scale** | SR_Scale | Масштабирование |
+| **World Offset** | SR_WorldOffset | Смещение позиции (без ротации) |
+| **Direct Offset** | SR_DirectOffset | Прямое смещение |
+| **Push Position** | SR_PushPosition | Аддитивный оффсет |
+| **Random Scale Ranged** | SR_ScaleRange | Случайный масштаб в диапазоне |
+| **Get Coordinates** | SR_GetCoords | Координаты от спавна по тегу |
+| **Get Restricted Rotation** | SR_GetRestrictedRotation | Ротация из command ячейки |
+| **Get Command Rotation** | SR_GetCommandRotation | Ротация из command |
+| **Change Rotation Pivot** | SR_ChangeRotationPivot | Поворот вокруг другого pivot |
 
 ### 8.4 Modelling — Генерация объектов
 
-| Правило | Описание |
-|---------|----------|
-| **SR_TileDesigner** | Генерация через Tile Designer |
-| **SR_RandomMesh** | Mesh Renderer со случайным мешем |
-| **SR_CableGenerator** | Процедурный кабельный меш |
-| **SR_ReplaceFilterMesh** | Замена mesh у MeshFilter |
-| **SR_ReplaceWithRandomPrefab** | Замена префаба на случайный |
-| **SR_ReplacePrefab** | Замена префаба + переменные |
-| **SR_SetMaterial** | Назначение материала |
-| **SR_RandomMaterial** | Случайный материал из списка |
-| **SR_SetGameObjectLayer** | Установка layer у GameObject |
-| **SR_AcquireSpawn** | Временный спавн для «пустого» слота |
-| **SR_CombineMesh** | Отложенное объединение мешей |
-| **SR_VolumeIndicator** | Маркер объёма |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Tile Designer** | SR_TileDesigner | Генерация через Tile Designer |
+| **Spawn Random Mesh Renderer** | SR_RandomMesh | Mesh Renderer со случайным мешем |
+| **Cable Mesh Generator** | SR_CableGenerator | Процедурный кабельный меш |
+| **Replace MeshFilter Mesh** | SR_ReplaceFilterMesh | Замена mesh у MeshFilter |
+| **Replace Spawn with Random Prefab** | SR_ReplaceWithRandomPrefab | Замена префаба на случайный |
+| **Replace Spawned Prefab** | SR_ReplacePrefab | Замена префаба + переменные |
+| **Set Mesh Material** | SR_SetMaterial | Назначение материала |
+| **Set Random Mesh Material** | SR_RandomMaterial | Случайный материал из списка |
+| **Set Game Object Layer** | SR_SetGameObjectLayer | Установка layer у GameObject |
+| **Acquire Spawn** | SR_AcquireSpawn | Временный спавн для «пустого» слота |
+| **Shedule Mesh Combine** | SR_CombineMesh | Отложенное объединение мешей |
+| **Volume Indicator** | SR_VolumeIndicator | Маркер объёма |
 
 #### Roof Generator
 
-| Правило | Описание |
-|---------|----------|
-| **SR_RoofPlaneGenerator** | Генерация плоскости крыши |
-| **SR_RoofSideGenerator** | Боковые стены крыши |
-| **SR_RoofGeneratorPlacer** | Размещение элементов крыши |
-| **SR_RoofGeneratorEdgesPlacer** | Рёбра/гребень крыши |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Roof Plane Generator** | SR_RoofPlaneGenerator | Генерация плоскости крыши |
+| **Roof Side Wall Generator** | SR_RoofSideGenerator | Боковые стены крыши |
+| **Roof Generator - Placer** | SR_RoofGeneratorPlacer | Размещение элементов крыши |
+| **Roof Generator - Edges Placer** | SR_RoofGeneratorEdgesPlacer | Рёбра/гребень крыши |
 
 ### 8.5 Quick Solutions — Быстрые решения
 
-| Правило | Описание |
-|---------|----------|
-| **SR_WallPlacer** | Размещение стен с выравниванием |
-| **SR_FloorPlacer** | Размещение полов |
-| **SR_DoorwayPlacer** | Дверные проёмы из guide |
-| **SR_DoubleDoorsHelper** | Двойные двери → один проём |
-| **SR_CornerDoorwayCheck** | Команда vs поворот угла |
-| **SR_StairsHelper** | Лестницы |
-| **SR_EdgesPlacer** | Плитки по краям |
-| **SR_DirectionalRemove** | Удаление по смещённой позиции |
-| **SR_CallRulesOf** | Вызов правил другого спавнера |
-| **SR_ModGraph** | Логика через Mod Node Graph |
-| **SR_SubSpawner** | Доп. спавн (deprecated) |
-| **SR_CablesSpawner** | Кабели (deprecated) |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Wall Placer** | SR_WallPlacer | Размещение стен с выравниванием |
+| **Floor Placer** | SR_FloorPlacer | Размещение полов |
+| **Doorway Placer** | SR_DoorwayPlacer | Дверные проёмы из guide |
+| **Double Doors Helper** | SR_DoubleDoorsHelper | Двойные двери → один проём |
+| **Command Dir vs Rotation (Corner Doorway Check)** | SR_CornerDoorwayCheck | Команда vs поворот угла |
+| **Stairs Placer Helper** | SR_StairsHelper | Лестницы |
+| **Edges Placer** | SR_EdgesPlacer | Плитки по краям |
+| **Directional Remove** | SR_DirectionalRemove | Удаление по смещённой позиции |
+| **Call Rules Logics Of** | SR_CallRulesOf | Вызов правил другого спавнера |
+| **Mod Node Graph** | SR_ModGraph | Логика через Mod Node Graph |
+| **Sub Spawner (Deprecated)** | SR_SubSpawner | Доп. спавн (deprecated) |
+| **Cables Spawner (Deprecated)** | SR_CablesSpawner | Кабели (deprecated) |
 
 ### 8.6 Collision — Коллизии
 
-| Правило | Описание |
-|---------|----------|
-| **SR_SpawnUntilCollides** | Спавн до коллизии |
-| **SR_CheckWorldCollision** | Проверка коллизий со сценой |
-| **SR_BoundCollisionOffset** | Оффсет по bounds + коллизии (Legacy) |
-| **SR_OffsetFromBounds** | Оффсет от bounds другого объекта (Legacy) |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Spawn Until Collides** | SR_SpawnUntilCollides | Спавн до коллизии |
+| **Check World Collision** | SR_CheckWorldCollision | Проверка коллизий со сценой |
+| **Bound Collision Offset** | SR_BoundCollisionOffset | Оффсет по bounds + коллизии (Legacy) |
+| **Offset From Bounds** | SR_OffsetFromBounds | Оффсет от bounds другого объекта (Legacy) |
 
 ### 8.7 PostEvents — Пост-обработка
 
-| Правило | Описание |
-|---------|----------|
-| **SR_FlattenTerrain** | Выравнивание Terrain |
-| **SR_CutTerrainHole** | Дыра в Terrain |
-| **SR_RemoveTerrainTrees** | Удаление деревьев Terrain |
-| **SR_RemoveTerrainDetail** | Удаление деталей Terrain |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Flatten Terrain Ground** | SR_FlattenTerrain | Выравнивание Terrain |
+| **Cut Terrain Hole** | SR_CutTerrainHole | Дыра в Terrain |
+| **Remove Terrain Trees** | SR_RemoveTerrainTrees | Удаление деревьев Terrain |
+| **Remove Terrain Details** | SR_RemoveTerrainDetail | Удаление деталей Terrain |
 
 ### 8.8 Operations — Операции
 
-| Правило | Описание |
-|---------|----------|
-| **SR_StackSpawner** | Стек префабов (stamper) |
-| **SR_PipeSpawner** | Pipe Generator без отдельного пресета |
-| **SR_DuplicateSpawns** | Дублирование спавнов |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Stack Spawner** | SR_StackSpawner | Стек префабов (stamper) |
+| **Pipe Spawner** | SR_PipeSpawner | Pipe Generator без отдельного пресета |
+| **Duplicate Spawns** | SR_DuplicateSpawns | Дублирование спавнов |
 
 ### 8.9 Count — Ограничения
 
-| Правило | Описание |
-|---------|----------|
-| **SR_SpawningPropability** | Вероятность спавна |
-| **SR_LimitSpawnCount** | Лимит числа спавнов |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Spawning Probability** | SR_SpawningPropability | Вероятность спавна |
+| **Limit Spawning Count** | SR_LimitSpawnCount | Лимит числа спавнов |
 
 ### 8.10 FieldAndGrid — Поле и сетка
 
-| Правило | Описание |
-|---------|----------|
-| **SR_GridSpecifics** | Условия по специфике сетки |
-| **SR_IsSameFieldSetup** | Проверка Field Setup |
-| **SR_OffsetCenter** | Смещение к центру сетки |
-| **SR_CompareVariable** | Сравнение переменной |
-| **SR_ShiftTowards** | Сдвиг к цели |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| **Grid Specifics** | SR_GridSpecifics | Условия по специфике сетки |
+| **Is same Field Setup** | SR_IsSameFieldSetup | Проверка Field Setup |
+| **Correct to Center** | SR_OffsetCenter | Смещение к центру сетки |
+| **Compare Variable** | SR_CompareVariable | Сравнение переменной |
+| **Shift Towards** | SR_ShiftTowards | Сдвиг к цели |
 
 ### 8.11 Other
 
-| Правило | Описание |
-|---------|----------|
-| **SR_Separator** | Визуальный разделитель |
-| **SR_Comment** | Комментарий/заметка |
-| **SR_DebugLog** | Debug.Log при условиях |
+| Имя в Inspector | Класс | Описание |
+|-----------------|-------|----------|
+| *(текст заголовка)* | SR_Separator | Визуальный разделитель |
+| **Comment** | SR_Comment | Комментарий/заметка |
+| **Debug Log** | SR_DebugLog | Debug.Log при условиях |
 
 ---
 
